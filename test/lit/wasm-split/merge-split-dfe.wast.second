@@ -1,0 +1,11 @@
+(module
+  (func $helper_second (result i32)
+    (i32.const 42)
+  )
+  (func $run_second (export "run_second") (result i32)
+    (i32.add
+      (i32.const 10)
+      (call $helper_second)
+    )
+  )
+)

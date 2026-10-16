@@ -1,0 +1,11 @@
+(module
+  (func $helper_third (result i32)
+    (i32.const 42)
+  )
+  (func $run_third (export "run_third") (result i32)
+    (i32.add
+      (i32.const 20)
+      (call $helper_third)
+    )
+  )
+)
